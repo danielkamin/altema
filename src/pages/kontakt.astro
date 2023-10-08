@@ -1,0 +1,22 @@
+---
+import ContactInfo from "@/components/ContactInfo";
+import LocationMap from "@/components/LocationMap";
+import PageLayout from "@/layouts/Base";
+
+const meta = {
+	title: "Kontakt",
+	description: "...",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Kontakt</h1>
+		<p>
+			Odwiedź nas lub skontaktuj się, aby poznać aktualną dostępność lokali i porozmawiać o
+			wszystkich zaletach wynajmowania lokalu od nas.
+		</p>
+		<ContactInfo />
+		<LocationMap />
+	</div>
+</PageLayout>

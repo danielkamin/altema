@@ -52,3 +52,12 @@ jobs:
         # ensure build works
       - name: Run build
         run: pnpm build
+
+      # - name: 📂 Sync files
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      #   with:
+      #     server: ${{ secrets.FTP_HOST }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     protocol: ftps
+      #     port: 21

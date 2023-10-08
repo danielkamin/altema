@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div>
+	<a
+		class="flex w-fit items-center gap-3 py-1 sm:hover:text-link"
+		href="mailto:biuro@prawkobiet4.pl"
+		target="_blank"
+		rel={`noopener noreferrer`}
+	>
+		<Icon class="h-6 w-6" name="mdi:email" aria-hidden="true" focusable="false" />
+		<span class="">biuro@prawkobiet4.pl</span>
+	</a>
+	<a
+		class="flex w-fit items-center gap-3 py-1 sm:hover:text-link"
+		href="tel:+48665501910"
+		target="_blank"
+		rel={`noopener noreferrer`}
+	>
+		<Icon class="h-6 w-6" name="mdi:phone" aria-hidden="true" focusable="false" />
+		<span class="">+48 665 501 910</span>
+	</a>
+	<p class="flex w-fit items-center gap-3 py-1 sm:hover:text-link">
+		<Icon class="h-6 w-6" name="mdi:map-marker" aria-hidden="true" focusable="false" />
+		<span class="">ul. Praw Kobiet 4, 15-535 Białystok</span>
+	</p>
+	<p class="flex w-fit items-center gap-3 py-1 sm:hover:text-link">
+		<Icon class="h-6 w-6" name="mdi:office-building" aria-hidden="true" focusable="false" />
+		<span class="">NIP: <b>5421026844</b></span>
+	</p>
+</div>

@@ -1,4 +1,3 @@
-{/* Inlined to avoid FOUC. */}
 <script is:inline>
 	function getUserPref() {
 		const storedTheme = typeof localStorage !== "undefined" && localStorage.getItem("theme");
@@ -18,14 +17,11 @@
 		}
 	}
 
-	// initial setup
 	setTheme(getUserPref());
 
-	// View Transitions hook to restore theme mode
 	document.addEventListener("astro:after-swap", () => setTheme(getUserPref()));
 
-	// listen for theme-change custom event, fired in src/components/ThemeToggle.astro
-	document.addEventListener("theme-change", (e) => {
+  document.addEventListener("theme-change", (e) => {
 		setTheme(e.detail.theme);
 	});
 </script>

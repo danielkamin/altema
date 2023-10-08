@@ -2,18 +2,18 @@ import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Chris Williams",
+	author: "Altema Marek Kamiński",
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: "Astro Theme Cactus",
+	title: "Lokale biurowe do wynajęcia",
 	// Meta property used as the default description meta property
-	description: "An opinionated starter theme for Astro",
+	description: "Lokale i przestrzenie biurowe do wynajęcia Białystok",
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: "en-GB",
+	lang: "pl-PL",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: "pl_PL",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: "en-GB",
+		locale: "pl-PL",
 		options: {
 			day: "numeric",
 			month: "short",
@@ -22,24 +22,20 @@ export const siteConfig: SiteConfig = {
 	},
 	// Include view-transitions: https://docs.astro.build/en/guides/view-transitions/
 	includeViewTransitions: false,
-	webmentions: {
-		link: "https://webmention.io/astro-theme-cactus.netlify.app/webmention",
-		pingback: "https://webmention.io/astro-theme-cactus.netlify.app/xmlrpc",
-	},
 };
 
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		title: "Home",
+		title: "Strona główna",
 		path: "/",
 	},
 	{
-		title: "About",
-		path: "/about/",
+		title: "O budynku",
+		path: "/budynek/",
 	},
 	{
-		title: "Blog",
-		path: "/posts/",
+		title: "Kontakt",
+		path: "/kontakt/",
 	},
 ];

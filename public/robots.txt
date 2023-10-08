@@ -1,4 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
 Allow: /
 
-Sitemap: https://astro-theme-cactus.netlify.app/sitemap-index.xml
+Sitemap: https://prawkobiet4.pl/sitemap-index.xml
