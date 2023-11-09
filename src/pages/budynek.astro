@@ -1,41 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import security from "@/assets/security.svg";
-import price from "@/assets/price.svg";
-import wifi from "@/assets/wifi.svg";
-import travel from "@/assets/travel.svg";
 import PageLayout from "@/layouts/Base";
+import ImagesSection from "@/components/ImagesSection";
 
 const meta = {
 	title: "O budynku",
 	description: "...",
 };
-const buildingInfo = [
-	{
-		image: security,
-		description:
-			"Parking oraz biurowiec jest zabezpiecozny i monitorowany przez 24 godziny na dobę, dzięki czemu możesz skupić się na tym, co najważniejsze - swojej pracy.",
-		imageOrderClass: "order-1",
-	},
-	{
-		image: price,
-		description:
-			"Oferujemy bardzo przystępne i konkurencyjne ceny względem inncyh biurowców znajdujących się w Białymstoku dzięki czemu wiesz, że nie przepłacasz za współpracę z nami.",
-		imageOrderClass: "order-2",
-	},
-	{
-		image: travel,
-		description:
-			"Nasz budynek jest strategicznie położony na obrzeżach miasta, pozostając w zasięgu kilku minut od centrum miasta zapewniając łatwy dostęp zarówno dla Ciebie, jak i Twoich klientów.",
-		imageOrderClass: "order-1",
-	},
-	{
-		image: wifi,
-		description:
-			"Ciesz się nowoczesnymi udogodnieniami, szybkim internetem i prywatnymi magazynami, które zwiększą Twoją produktywność.",
-		imageOrderClass: "order-2",
-	},
-];
 ---
 
 <PageLayout meta={meta}>
@@ -45,26 +16,13 @@ const buildingInfo = [
 		<p>
 			Czy jesteś zmęczony pracą z domu lub szukasz idealnego biura? Nie szukaj dłużej! Na Praw
 			Kobiet 4 oferujemy luksusowe przestrzenie biurowe dostosowane do Twoich profesjonalnych
-			potrzeb. Oto dlaczego powinieneś wybrać nas:
+			potrzeb.
+		</p>
+		<p>
+			Gotowy, by podnieść swoje doświadczenia w pracy? Skontaktuj się z nami już dziś przechodząc do
+			zakładki <a href="/kontakt" rel="prefetch" class="font-semibold sm:hover:text-link">kontakt</a
+			>, aby już jutro podnieś swój poziom pracy z Altemą - Tam, gdzie sukces się zaczyna!
 		</p>
 	</div>
-	{
-		buildingInfo.map(({ image, description, imageOrderClass }) => (
-			<div class="my-16 flex h-40 items-center gap-8">
-				<Image
-					src={image}
-					alt="Bezpieczeństwo"
-					class={`h-full w-1/2 ${imageOrderClass}`}
-					loading="eager"
-					fetchpriority="high"
-				/>
-				<p class="order-1 w-1/2">{description}</p>
-			</div>
-		))
-	}
-	<p>
-		Gotowy, by podnieść swoje doświadczenia w pracy? Skontaktuj się z nami już dziś przechodząc do
-		zakładki <a href="/kontakt" rel="prefetch" class="font-semibold sm:hover:text-link">kontakt</a>,
-		aby już jutro podnieś swój poziom pracy z Altemą - Tam, gdzie sukces się zaczyna!
-	</p>
+	<ImagesSection />
 </PageLayout>

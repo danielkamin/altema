@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import corridor1 from "@/assets/corridor1.jpg";
+import corridor2 from "@/assets/corridor2.jpg";
+import corridor3 from "@/assets/corridor3.jpg";
+import corridor4 from "@/assets/corridor4.jpg";
+import staircase1 from "@/assets/staircase1.jpg";
+import staircase2 from "@/assets/staircase2.jpg";
+import staircase3 from "@/assets/staircase3.jpg";
+import staircase4 from "@/assets/staircase4.jpg";
+import staircase5 from "@/assets/staircase5.jpg";
+import backParking from "@/assets/back-parking.jpg";
+import conferenceRoom from "@/assets/conference-room.jpg";
+import entryHall from "@/assets/entry-hall.jpg";
+import leftSide from "@/assets/left-side.jpg";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const images: { image: any; alt: string }[] = [
+	{
+		image: corridor1,
+		alt: "Korytarz na 1. piętrze",
+	},
+	{
+		image: corridor2,
+		alt: "Korytarz na 2. piętrze",
+	},
+
+	{
+		image: corridor4,
+		alt: "Korytarz na 1. piętrze",
+	},
+	{
+		image: staircase1,
+		alt: "Boczna klatka schodowa na 1. piętrze",
+	},
+	{
+		image: staircase2,
+		alt: "Boczna klatka schodowa na 2. piętrze",
+	},
+
+	{
+		image: staircase5,
+		alt: "Główna klatka schodowa na parterze",
+	},
+	{
+		image: backParking,
+		alt: "Tylni parking",
+	},
+	{
+		image: conferenceRoom,
+		alt: "Sala konferencyjna",
+	},
+	{
+		image: entryHall,
+		alt: "Hol przy wejściu głównym",
+	},
+
+	{
+		image: corridor3,
+		alt: "Róg w korytarzu na 1. piętrze",
+	},
+	{
+		image: staircase3,
+		alt: "Główna klatka schodowa na 2. piętrze",
+	},
+	{
+		image: staircase4,
+		alt: "Główna klatka schodowa na 1. piętrze",
+	},
+	{
+		image: leftSide,
+		alt: "Lewa strona budynku",
+	},
+];
+---
+
+<section class="my-16">
+	<div class="flex flex-col gap-4">
+		{
+			images.map((im) => (
+				<a
+					href={im.image.src}
+					target="_blank"
+					class="cursor-pointer  transition-opacity hover:opacity-50"
+				>
+					<Image
+						class="max-h-96 w-full rounded object-cover"
+						src={im.image}
+						alt={im.alt}
+						loading="lazy"
+					/>
+				</a>
+			))
+		}
+	</div>
+</section>
